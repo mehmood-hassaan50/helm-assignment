@@ -1,11 +1,6 @@
 # Base Image 
-
-FROM httpd:2.4
-
+FROM nginx:alpine
 #index.html file
-
-RUN echo hello world >> /var/www/index.html 
-
-#Expose Apache Port
-
+RUN echo hello world >> /usr/share/nginx/html/index.html
+#Expose Port
 EXPOSE 80
